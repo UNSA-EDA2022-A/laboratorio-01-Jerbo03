@@ -31,11 +31,12 @@ public class Exercise1 {
 			case 0:
 				if (n == 0) return 0;
 				if (n <= 2) return 1;
-				return -1;
+				break;
 			case 1:
 				if (n < 2) return 1;
-				return -1;
+				break;
 		}
+		return -1;
 	}
 	
 	public int convertir(int n, int k) {
