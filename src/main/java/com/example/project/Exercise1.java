@@ -15,13 +15,14 @@ public class Exercise1 {
 	}
 
 	public String convertirBaseGabriel(int a) {
-		int Estado = 0;
-		int k = 0;
-		int conversion = 0;
-		while (Math.pow(10,k) < a) {
+		int Estado = 0, k = 0, conversion = 0;
+		int numero = a;
+		while (Math.pow(10,k) < numero) {
 			Estado = comprobarNumero(Estado, a % 10);
 			if (Estado == -1) return "El numero proporcionado no esta en base Gabriel.";
 			conversion += convertir(a % 10, k);
+			a /= 10;
+			k++;
 		}
 		return "El numero proporcionado es " + conversion + " en base decimal";		
 	}
@@ -40,7 +41,7 @@ public class Exercise1 {
 	}
 	
 	public int convertir(int n, int k) {
-		return (int) Math.pow(n, k+1) - 1;
+		return n * ((int) Math.pow(2, k+1) - 1);
 	}
 	
 }
