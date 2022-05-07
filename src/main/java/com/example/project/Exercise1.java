@@ -23,7 +23,7 @@ public class Exercise1 {
 			if (Estado == -1) return "El numero proporcionado no esta en base Gabriel.";
 			conversion += convertir(a % 10, k);
 		}
-		return conversion;		
+		return "El numero proporcionado es " + conversion + " en base decimal";		
 	}
 	
 	public int comprobarNumero(int Estado, int n) {
