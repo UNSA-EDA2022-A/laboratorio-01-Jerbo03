@@ -17,16 +17,16 @@ public class Exercise1 {
 	public String convertirBaseGabriel(int a) {
 		int Estado = 0;
 		int k = 0;
-		int conversión = 0;
+		int conversion = 0;
 		while (Math.pow(10,k) < a) {
-			Estado = comptobarNúmero(Estado, a % 10);
+			Estado = comprobarNumero(Estado, a % 10);
 			if (Estado == -1) return "El numero proporcionado no esta en base Gabriel.";
-			conversión += convertir(a % 10, k);
+			conversion += convertir(a % 10, k);
 		}
-		return conversión;		
+		return conversion;		
 	}
 	
-	public int comprobarNúmero(int Estado, int n) {
+	public int comprobarNumero(int Estado, int n) {
 		switch(Estado) {
 			case 0:
 				if (n == 0) return 0;
