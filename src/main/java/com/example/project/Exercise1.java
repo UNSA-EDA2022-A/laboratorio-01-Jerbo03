@@ -39,7 +39,7 @@ public class Exercise1 {
 	}
 	
 	public int convertir(int n, int k) {
-		return Math.pow(n, k+1) - 1;
+		return (int) Math.pow(n, k+1) - 1;
 	}
 	
 }
