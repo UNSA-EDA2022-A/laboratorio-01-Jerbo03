@@ -22,10 +22,9 @@ public class Exercise2 {
 		int counter = 0, previo = 0, limite = previo + 50;
 		for (int i = 0; i < a.length; i++) {
 			if (limite < a[i]) {
-				if (previo + 50 > a[i]) {
-					limite = previo + 50;
-					counter++;
-				} else return -1;
+				if (previo + 50 < a[i]) return -1;
+				limite = previo + 50;
+				counter++;
 			}
 			previo = a[i];
 		}
