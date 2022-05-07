@@ -15,8 +15,22 @@ public class Exercise1 {
 	}
 
 	public String convertirBaseGabriel(int a) {
-
+		int Estado = 0;
+		int k = 0;
 		// TO DO
 		return "El numero proporcionado no esta en base Gabriel.";
 	}
+	
+	public int comprobarNúmero(int Estado, int n) {
+		switch(Estado) {
+			case 0:
+				if (n == 0) return 0;
+				if (n <= 2) return 1;
+				return -1;
+			case 1:
+				if (n < 2) return 1;
+				return -1;
+		}
+	}
+	
 }
