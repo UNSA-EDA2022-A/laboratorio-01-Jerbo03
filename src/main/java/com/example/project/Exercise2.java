@@ -19,16 +19,15 @@ public class Exercise2 {
 	}
 
 	public Integer getMenorNumeroSaltos(int a []) {
-		int counter = 0, previo = 0, limite = previo + 50, i = 0;
-		while (i < a.length) {
-			if (limite - a[i] < 0) {
-				if (previo + 50 - a[i] > 0) {
+		int counter = 0, previo = 0, limite = previo + 50;
+		for (int i = 0; i < a.length; i++) {
+			if (limite < a[i]) {
+				if (previo + 50 > a[i]) {
 					limite = previo + 50;
 					counter++;
 				} else return -1;
 			}
 			previo = a[i];
-			i++;
 		}
 		return counter + 1;
 	}
