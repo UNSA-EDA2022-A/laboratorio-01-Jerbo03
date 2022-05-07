@@ -24,7 +24,7 @@ public class Exercise1 {
 			a /= 10;
 			k++;
 		}
-		return conversion;		
+		return "" + conversion;		
 	}
 	
 	public int comprobarNumero(int Estado, int n) {
