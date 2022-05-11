@@ -19,7 +19,7 @@ public class Exercise1 {
 		int numero = a;
 		while (Math.pow(10,k) < numero) {
 			Estado = comprobarNumero(Estado, a % 10);
-			if (Estado == -1) return "El numero proporcionado no esta en base Gabriel.";
+			if (Estado == -1) {return "El numero proporcionado no esta en base Gabriel.";}
 			conversion += convertir(a % 10, k);
 			a /= 10;
 			k++;
